@@ -1,0 +1,297 @@
+/* src/assets/landingp.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --green: #6ac47c;
+  --light-bg: #eaf6f8;
+  --black: #000;
+  --gray: #555;
+  --font: 'Poppins', sans-serif;
+}
+
+body,lp
+.lp {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+  background: var(--light-bg);
+  color: var(--black);
+}
+
+/* NAV */
+.lp-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--light-bg);
+}
+.lp-logo {
+  height: 3rem;
+}
+.lp-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  font-size: 1rem;
+}
+.lp-nav-links li:hover {
+  color: var(--green);
+}
+.caret {
+  font-size: 0.7rem;
+}
+
+/* Nav-right: strip underlines and style Login & Signup as pills */
+.lp-nav-right a {
+  text-decoration: none;
+}
+.lp-nav-right .btn-login,
+.lp-nav-right .btn-signup {
+  margin-left: 1rem;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Black “Login” pill */
+.lp-nav-right .btn-login {
+  background: var(--black);
+  color: #fff;
+}
+.lp-nav-right .btn-login:hover {
+  background: #333;
+}
+
+/* Green “Signup” pill */
+.lp-nav-right .btn-signup {
+  background: var(--green);
+  color: #fff;
+}
+.lp-nav-right .btn-signup:hover {
+  background: #5fb369;
+}
+
+/* HERO */
+.lp-main {
+  width: 100%;
+}
+.lp-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+/* Center and constrain the hero text block */
+.lp-hero-inner {
+  max-width: 1500px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Subtitle */
+.lp-sub {
+  margin: 1.5rem auto 0;
+  text-align: center;
+}
+
+/* Subtitle text spans - make larger and keep on one line */
+.lp-sub-full,
+.lp-sub-short {
+  display: inline-block;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  /* white-space: nowrap; */
+  margin: 0.5rem 0;
+  /* text-align: center; */
+}
+
+/* If using <span class="lp-sub-line">… */
+.lp-sub-line {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin: 0.5rem 0;
+  /* Only keep white-space: nowrap if you are sure it fits on all screens, otherwise remove it */
+}
+
+.lp-hero-inner h1 {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Responsive sizing for different screen sizes */
+@media (max-width: 768px) {
+  .lp-hero-inner h1 {
+    font-size: 3.5rem;
+    line-height: 1.15;
+  }
+  .lp-sub-full,
+  .lp-sub-short {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lp-hero-inner h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+  }
+  .lp-sub-full,
+  .lp-sub-short {
+    font-size: 1.1rem;
+  }
+}
+
+.highlight {
+  background: #c7fbd6;
+}
+
+/* CONTENT */
+.lp-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+/* Left copy */
+.lp-copy {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 2rem;
+}
+.lp-copy h2 {
+  font-size: 5rem;
+  margin: 0.2rem 0;
+}
+
+/* Hero-action buttons */
+.lp-actions {
+  margin-top: 1.5rem;
+}
+.btn-lg {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  border: none;
+}
+
+/* Hero-action: black Login pill, green Signup pill */
+.btn-lg.btn-login {
+  background: var(--black);
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: background 0.2s ease;
+}
+.btn-lg.btn-login:hover {
+  background: #333;
+}
+
+.btn-lg.btn-signup {
+  background: var(--green);
+  color: #fff;
+  text-decoration: none;
+}
+.btn-lg.btn-signup:hover {
+  background: #5fb369;
+}
+
+/* CAROUSEL */
+/* carousel wrapper width = card(360px) + spacing(80px)*3 */
+.lp-carousel {
+  position: relative;
+  width: calc(360px + 80px * 3);
+  height: 480px;
+  overflow: visible;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 480px;
+  background-size: cover;
+  background-position: center;
+  border: 4px solid var(--green);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+}
+
+/* arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 80px;
+  background: rgba(255,255,255,0.6);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+.carousel-arrow.left {
+  left: -50px;
+}
+.carousel-arrow.right {
+  right: -50px;
+}
+
+/* utility */
+.no-break {
+  white-space: nowrap;
+}
+
+/* Footer pills under Swipe block */
+.lp-footer-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 1rem 0 0;
+}
+
+/* Footer Login & Signup pills */
+.lp-footer-links .btn-login,
+.lp-footer-links .btn-signup {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+.lp-footer-links .btn-login {
+  background: var(--black);
+}
+.lp-footer-links .btn-login:hover {
+  background: #333;
+}
+
+.lp-footer-links .btn-signup {
+  background: var(--green);
+}
+.lp-footer-links .btn-signup:hover {
+  background: #5fb369;
+}

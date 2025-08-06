@@ -1,0 +1,167 @@
+/* signin.css */
+
+.signin-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.signin-left,
+.signin-right {
+  flex: 1;
+  position: relative;
+}
+
+/* LEFT PANEL */
+.signin-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.signin-left .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.signin-left .left-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0 1rem;
+  color: #fff;
+}
+.signin-left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.signin-left .left-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+.signin-left .left-content p {
+  font-size: 1.75rem;
+  margin: 0;
+}
+.signin-left p {
+  font-size: 1.25rem;
+}
+
+/* RIGHT PANEL */
+.signin-right {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3rem;
+}
+.signin-right h2 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+.signin-right .sub {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+.signin-right .form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+.signin-right .form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.pw-wrapper {
+  position: relative;
+}
+.pw-wrapper .toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.forgot {
+  display: block;
+  text-align: right;
+  margin-bottom: 1.5rem;
+  color: #2ecc71;
+  text-decoration: none;
+}
+.btn-signin {
+  width: 100%;
+  padding: 0.75rem;
+  background: #2ecc71;
+  border: none;
+  border-radius: 2rem;
+  color: #fff;
+  font-size: 1.125rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+/* alternate login */
+.alt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.alt .line {
+  flex: 1;
+  height: 1px;
+  background: #eee;
+  margin: 0 1rem;
+}
+
+/* social icons */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.social .icon {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.25rem;
+  background: #fff;
+}
+
+/* bottom link */
+.no-account {
+  text-align: center;
+  color: #555;
+}
+.no-account a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .signin-left {
+    display: none;
+  }
+  .signin-right {
+    flex: 1;
+    padding: 0 1.5rem;
+  }
+} 
