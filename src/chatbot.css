@@ -147,3 +147,28 @@
     order: 2;
   }
 } 
+.bubble {
+  max-width: 70%;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 16px;
+}
+.bubble.user {
+  background: #007aff;
+  color: white;
+  align-self: flex-end;
+}
+.bubble.bot {
+  background: #f1f0f0;
+  color: #333;
+  align-self: flex-start;
+}
+.view-gallery-button {
+  margin: 12px auto;
+  padding: 8px 16px;
+  background-color: #07462f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

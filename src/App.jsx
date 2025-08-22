@@ -6,6 +6,7 @@ import Signup from './signup.jsx';
 import Chatbot from './chatbot.jsx';
 import Signin from './signin.jsx';
 import Cards from './cards.jsx';
+import DogGallery from './assets/DogGallery.jsx';
 
 export default function App() {
   return (
@@ -15,7 +16,7 @@ export default function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/chatbot" element={<Chatbot />} />
-        <Route path="/cards" element={<Cards />} />
+        <Route path="/DogGallery" element={<DogGallery/>} />
       </Routes>
     </BrowserRouter>
   );
