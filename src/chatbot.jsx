@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './chatbot.css';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8001';
+//const API_BASE = No API base for privacy
 const SPECIES_MAP = { Dog: 'dog', Cat: 'cat', Other: 'dog' }; // "other" -> default dog for now
 const AGE_MAP = { Any: '', 'Puppy/Kitten': 'puppy', Adult: 'adult', Senior: 'senior' };
 
